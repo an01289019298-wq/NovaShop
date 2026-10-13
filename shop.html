@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop all products | NovaShop</title>
+  <meta name="description" content="Browse and filter NovaShop's demo catalog of headphones, smartwatches, electronics, clothing, shoes, bags and accessories.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><h1>Shop all products</h1><p>Search, filter by category and price, then sort to find your match.</p></div></section>
+    <div class="container shop-layout">
+      <div class="filters-overlay" id="filters-overlay" hidden></div>
+      <aside class="filters" id="filters" aria-label="Product filters">
+        <div class="filters-head"><h2>Filters</h2><button class="icon-btn" type="button" id="close-filters" aria-label="Close filters"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+        <div class="filter-block"><label class="filter-title" for="filter-search">Search by name</label><input class="input" id="filter-search" type="search" placeholder="e.g. headphones" maxlength="80" autocomplete="off"></div>
+        <fieldset class="filter-block"><legend class="filter-title">Category</legend><div id="category-filters"></div></fieldset>
+        <fieldset class="filter-block"><legend class="filter-title">Price range (USD)</legend>
+          <div class="price-inputs"><div><label class="sr-only" for="price-min">Minimum price</label><input class="input" id="price-min" type="number" min="0" inputmode="numeric" placeholder="Min"></div><span aria-hidden="true">to</span><div><label class="sr-only" for="price-max">Maximum price</label><input class="input" id="price-max" type="number" min="0" inputmode="numeric" placeholder="Max"></div></div>
+          <p class="field-error" id="price-error" role="alert"></p>
+        </fieldset>
+        <div class="filter-block"><label class="check-row"><input type="checkbox" id="in-stock-only"><span>Hide out-of-stock items</span></label></div>
+        <div class="filter-actions"><button class="btn btn-outline btn-block" type="button" data-clear-filters>Clear filters</button><button class="btn btn-primary btn-block drawer-only" type="button" id="apply-filters">Show results</button></div>
+      </aside>
+      <section class="shop-results" aria-label="Products">
+        <div class="toolbar">
+          <button class="btn btn-outline drawer-only" type="button" id="open-filters" aria-expanded="false" aria-controls="filters"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></svg>Filters</button>
+          <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+          <div class="sort"><label for="sort-select">Sort by</label>
+            <select class="input" id="sort-select"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="newest">Newest</option><option value="rating">Top rated</option></select></div>
+        </div>
+        <ul class="active-filters" id="active-filters" aria-label="Active filters"></ul>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="state-card" id="empty-state" hidden><h2>No products match your filters</h2><p>Try a different search term, widen the price range or clear your filters.</p><button class="btn btn-primary" type="button" data-clear-filters>Clear all filters</button></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

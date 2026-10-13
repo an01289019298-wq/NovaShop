@@ -1,0 +1,31 @@
+/* Shop page: filters sidebar / mobile drawer, toolbar, results. */
+.shop-layout { display: block; padding-block: var(--space-5) var(--space-7); }
+.filters {
+  position: fixed; z-index: 150; top: 0; left: 0; bottom: 0; width: min(88vw, 360px);
+  background: var(--bg); padding: var(--space-4); overflow-y: auto;
+  transform: translateX(-102%); visibility: hidden; transition: transform .3s ease, visibility .3s;
+  box-shadow: var(--shadow);
+}
+.filters.is-open { transform: none; visibility: visible; }
+.filters-overlay { position: fixed; inset: 0; z-index: 140; background: rgba(10, 6, 30, .55); }
+.filters-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-3); }
+.filters-head h2 { margin: 0; font-size: 1.2rem; }
+.filter-block { padding-block: var(--space-4); border-bottom: 1px solid var(--border); }
+.filter-title { display: block; font-weight: 700; margin-bottom: var(--space-3); font-size: .95rem; }
+.radio-row, .check-row { display: flex; align-items: center; gap: .6rem; padding: .4rem 0; cursor: pointer; min-height: 40px; }
+.radio-row input, .check-row input { width: 18px; height: 18px; accent-color: var(--primary); flex: none; }
+.radio-row span { flex: 1; }
+.radio-row small { color: var(--muted); }
+.price-inputs { display: flex; align-items: center; gap: .6rem; }
+.price-inputs > div { flex: 1; }
+.filter-actions { display: grid; gap: var(--space-3); padding-top: var(--space-4); }
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+.result-count { margin: 0; color: var(--muted); font-weight: 500; flex: 1; order: 3; flex-basis: 100%; }
+.sort { display: flex; align-items: center; gap: .6rem; margin-left: auto; }
+.sort label { font-size: .9rem; color: var(--muted); white-space: nowrap; }
+.sort select { min-width: 170px; }
+.active-filters { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: var(--space-4); }
+.active-filters:empty { display: none; }
+.active-filters li { background: var(--tint); color: var(--primary); font-size: .82rem; font-weight: 700; padding: .25rem .7rem; border-radius: 999px; }
+.drawer-only { display: inline-flex; }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaShop | Tech, fashion and everyday gear</title>
+  <meta name="description" content="NovaShop is a modern demo e-commerce storefront with headphones, smartwatches, clothing, shoes and accessories. Built with HTML, CSS and vanilla JavaScript.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-tag">Autumn collection 2026</p>
+          <h1>Tech and style, picked to last</h1>
+          <p class="hero-lead">Headphones that disappear on your commute, watches that keep up with you, and everyday clothing you will actually reach for. Free shipping over $100.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="shop.html">Shop now</a>
+            <a class="btn btn-outline btn-lg" href="#new">See new arrivals</a>
+          </div>
+          <p class="hero-note">Use code <strong>NOVA10</strong> at checkout for 10% off. Demo store, sample data.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&h=1000&q=80" alt="Nova Pro wireless headphones on a purple background" width="1000" height="1000" fetchpriority="high">
+          </div>
+          <a class="hero-card" href="product.html?id=1" aria-label="View Nova Pro Wireless Headphones">
+            <span class="hc-label">Best seller</span>
+            <strong>Nova Pro Wireless Headphones</strong>
+            <span class="hc-price">$129 <del>$179</del> <em>-28%</em></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container perks-strip" aria-label="Store benefits">
+      <ul>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg><div><strong>Free shipping</strong><span>On orders over $100</span></div></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.5 9a9 9 0 0 1 14.8-3.4L23 10M1 14l4.7 4.4A9 9 0 0 0 20.5 15"/></svg><div><strong>30-day returns</strong><span>Demo policy</span></div></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Two-year warranty</strong><span>On all electronics</span></div></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-7h3zM3 19a2 2 0 0 0 2 2h1v-7H3z"/></svg><div><strong>Friendly support</strong><span>Mon to Fri, 9am to 6pm</span></div></li>
+      </ul>
+    </section>
+
+    <section class="section container" id="categories" aria-labelledby="cat-title">
+      <div class="section-head"><h2 id="cat-title">Shop by category</h2><a class="link-arrow" href="shop.html">All products</a></div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="best-title">
+      <div class="section-head"><h2 id="best-title">Best sellers</h2><a class="link-arrow" href="shop.html?sort=rating">Top rated</a></div>
+      <div class="product-grid" id="bestsellers"></div>
+    </section>
+
+    <section class="container" aria-labelledby="promo-title">
+      <div class="promo">
+        <div>
+          <h2 id="promo-title">Take 10% off your first demo order</h2>
+          <p>Enter <strong>NOVA10</strong> in your cart. Bigger basket? <strong>WELCOME20</strong> takes 20% off. Both codes work in this demo only.</p>
+        </div>
+        <a class="btn btn-light btn-lg" href="shop.html">Start saving</a>
+      </div>
+    </section>
+
+    <section class="section container" id="new" aria-labelledby="new-title">
+      <div class="section-head"><h2 id="new-title">New arrivals</h2><a class="link-arrow" href="shop.html?sort=newest">See all new</a></div>
+      <div class="product-grid" id="new-arrivals"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="tm-title">
+      <div class="section-head"><h2 id="tm-title">What shoppers say</h2><p class="muted">Illustrative sample reviews for this demo</p></div>
+      <div class="testimonial-grid" id="testimonials"></div>
+    </section>
+
+    <section class="newsletter" aria-labelledby="nl-title">
+      <div class="container newsletter-inner">
+        <div><h2 id="nl-title">Get new drops before everyone else</h2><p>Join the list for launch alerts and member-only codes. This is a demo form and does not store your email.</p></div>
+        <div class="nl-box">
+          <form class="newsletter-form" novalidate>
+            <label class="sr-only" for="nl-email">Email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" aria-describedby="nl-msg" required>
+            <button class="btn btn-light" type="submit">Subscribe</button>
+          </form>
+          <p class="form-msg" id="nl-msg" role="status" hidden></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
